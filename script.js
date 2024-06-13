@@ -10,7 +10,25 @@ const setSTATE = (newItem, currentState = STATE) => {
 }
 /* ---------- TEMPLATE HELPERS ---------- */
 
+const createJokeData = (response) => {
+    const joke = response.joke;
 
+    return (`
+    <div class="joke-container">
+        <p>${joke}</p>
+    </div>
+    `)
+}
+
+const createCatData = (response) => {
+    const cat = response[0].url;
+
+    return (`
+    <div class="cat-container">
+        <img src="${cat}">
+    </div>
+    `)
+}
 /* ---------- TEMPLATES ---------- */
 
 const landingPage = (`
@@ -28,12 +46,20 @@ const aboutPage = (`
 const catsPage = (`
 <div class="cats-page">
     <p>CATS PAGE</p>
+    <div class="cat-result"></div>
+    <form class="cat-form">
+        <button type="submit" id="catButton">Click for Cat!</button>
+    </form>
 </div>
 `)
 
 const jokesPage = (`
 <div class="jokes-page">
     <p>JOKES PAGE</p>
+    <div class="joke-result"></div>
+    <form class="joke-form">
+        <button type="submit" id="jokeButton">Press for Joke!</button>
+    </form>
 </div>
 `)
 
@@ -48,8 +74,6 @@ const contactPage = (`
     <p>CONTACT PAGE</p>
 </div>
 `)
-
-
 
 /* ---------- RENDER FUNCTION ---------- */
 const renderLandingPage = () => {
@@ -109,6 +133,16 @@ const renderContactPage = () => {
     $('#weather').html("");
     $('#contact').html(contactPage);
 }
+
+const renderCatResult = (result) => {
+    const catData = createCatData(result);
+    $('.cat-result').html(catData)
+}
+
+const renderJokeResult = (result) => {
+    const jokeData = createJokeData(result);
+    $('.joke-result').html(jokeData)
+}
 const render = () => {
     if (STATE.route === 'aboutPage') {
         renderAboutPage();
@@ -117,7 +151,7 @@ const render = () => {
             renderCatsPage();
         } else {
             if (STATE.route === 'jokesPage') {
-                renderWeatherPage();
+                renderJokesPage();
             } else {
                 if (STATE.route === 'weatherPage') {
                     renderWeatherPage();
@@ -135,6 +169,31 @@ const render = () => {
 }
 /* ---------- AJAX REQUEST ---------- */
 
+const getJokeAPI = () => {
+    const options = {
+        type: 'GET',
+        "url": 'https://v2.jokeapi.dev/joke/Any?blacklistFlags=nsfw,religious,political,racist,sexist,explicit&type=single',
+        success: data => {
+            console.log(data);
+            renderJokeResult(data)
+        }, error: err => console.log(err)
+
+    }
+    $.ajax(options)
+}
+
+const getCatAPI = () => {
+    console.log('calling API')
+    const options = {
+        'type': 'GET',
+        "url": 'https://api.thecatapi.com/v1/images/search',
+        success: data => {
+            console.log(data);
+            renderCatResult(data)
+        }, error: err => console.log(err)
+    }
+    $.ajax(options)
+}
 
 /* ---------- EVENT HANDLERS---------- */
 const homeHandler = () => {
@@ -161,6 +220,15 @@ const contactHandler = () => {
     setSTATE({ route: 'contactPage' })
 }
 
+const catSubmitHandler = (event) => {
+    console.log('button clicked')
+    getCatAPI()
+}
+
+const jokeSubmitHandler = (event) => {
+    getJokeAPI()
+}
+
 /* ---------- EVENT LISTENERS ---------- */
 $('.nav-bar').on('click', '#nav-home', () => homeHandler());
 $('.nav-bar').on('click', '#nav-about', () => aboutHandler());
@@ -168,6 +236,9 @@ $('.nav-bar').on('click', '#nav-cats', () => catsHandler());
 $('.nav-bar').on('click', '#nav-jokes', () => jokesHandler());
 $('.nav-bar').on('click', '#nav-weather', () => weatherHandler());
 $('.nav-bar').on('click', '#nav-contact', () => contactHandler());
+
+$('main').on('submit', '.joke-form', event => jokeSubmitHandler(event));
+$('main').on('submit', '.cat-form', event => catSubmitHandler(event));
 
 /* ---------- LOAD PAGE ---------- */
 $(render)
