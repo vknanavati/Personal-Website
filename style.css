@@ -1,0 +1,40 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    /*puts header elements on same horizontal plane */
+    display: flex;
+    justify-content: space-between;
+    height: 100px;
+    /*vertically centers header elements*/
+    align-items: center;
+    padding: 30px;
+    background: paleturquoise;
+}
+
+ul {
+    /*puts ul elements on same horizontal plane*/
+    display: flex;
+    /*removes bullet-point from ul items*/
+    list-style-type: none;
+
+}
+
+ul li a {
+    /*removes underline from a elements*/
+    text-decoration: none;
+    /*right padding 10px*/
+    padding: 0 10px;
+    /*allows for horizontal/vertical paddings*/
+    display: inline-block;
+}
+
+main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
