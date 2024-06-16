@@ -2,6 +2,8 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: "Barlow", sans-serif;
+
 }
 
 header {
@@ -36,7 +38,16 @@ main {
     display: flex;
     align-items: center;
     justify-content: center;
+}
 
+
+.button {
+    font-size: 30px;
+    padding: 10px;
+    border-radius: 5px;
+    font-weight: 600;
+    text-align: center;
+    /* border: none; */
 }
 
 /*styling for Cats page*/
@@ -76,34 +87,64 @@ main {
 
 /*Styling for Jokes Page*/
 .jokes-page {
-    border: 2px solid blue;
+    padding-top: 200px;
 }
 
 .jokes-title p {
-    border: 5px solid palevioletred;
     text-align: center;
-    margin: 50px;
+    /* margin: 50px; */
+    font-weight: 700;
+    font-style: italic;
+    font-size: 60px;
 }
 
-.jokes-page p {
+.joke-result {
+    border-radius: 10px;
+    width: 900px;
+    height: 400px;
     text-align: center;
+    margin-left: 50px;
+    margin-top: 70px;
+    box-shadow: 30px 30px 40px 5px;
+    background-color: #ACE6E0;
+    color: #112A46;
+
+}
+
+.joke-container {
+    text-align: center;
+    font-size: 30px;
+    word-wrap: break-word;
+    padding-top: 20px;
+    padding-left: 5px;
+    padding-right: 5px;
 }
 
 .joke-button {
     text-align: center;
-}
-
-.joke-result {
-    border: 3px solid red;
-    width: 550px;
-    height: 160px;
-    text-align: center;
-    padding: 10px;
+    padding-top: 30px;
 }
 
 /*Styling for Weather Page*/
-.weather-page p {
+.weather-title {
     text-align: center;
+    padding-top: 10px;
+    padding-bottom: 30px;
+    font-size: 100px;
+    padding-top: 100px;
+}
+
+.city {
+    width: 400px;
+    font-size: 30px;
+    padding-right: 20px;
+}
+
+.weather-button {
+    margin-left: 20px;
+    width: 250px;
+    font-size: 30px;
+    border-radius: 5px;
 }
 
 .weather-form {
@@ -116,16 +157,17 @@ main {
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    padding: 10px;
+    padding-top: 50px;
 }
 
 .weather-result div {
-    width: 300px;
-    height: 350px;
+    width: 100%;
+    height: 400px;
     background: linear-gradient(#5fd6eb, rgb(10, 45, 117));
     color: white;
     text-align: center;
     margin: 10px;
+    padding-top: 10px;
     border-radius: 10px;
     font-size: 30px;
 
