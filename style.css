@@ -6,6 +6,10 @@
 
 }
 
+body {
+    background-color: #5fd6eb;
+}
+
 header {
     /*puts header elements on same horizontal plane */
     display: flex;
@@ -15,6 +19,7 @@ header {
     align-items: center;
     padding: 30px;
     background: paleturquoise;
+    font-size: 30px;
 }
 
 ul {
@@ -44,7 +49,7 @@ main {
 .button {
     font-size: 30px;
     padding: 10px;
-    border-radius: 5px;
+    border-radius: 10px;
     font-weight: 600;
     text-align: center;
     /* border: none; */
@@ -52,12 +57,23 @@ main {
 
 /*styling for Cats page*/
 
-.cats-page p {
+.cat-title p {
     text-align: center;
+    padding-top: 60px;
+    padding-bottom: 50px;
+    font-size: 60px;
 }
 
 .cat-button {
     text-align: center;
+}
+
+.cat-result {
+    border-top: 20px solid #A5E9E2;
+    width: 700px;
+    height: 700px;
+    border-radius: 20px;
+    background-color: #A5E9E2;
 }
 
 .cat-result img {
@@ -65,24 +81,21 @@ main {
     margin-left: auto;
     margin-right: auto;
     width: 80%;
-    /* max-width: 80%; */
-    /* max-height: 80%; */
-
 }
 
 .cat-result p {
-    border: 2px solid green;
-}
-
-.cat-result {
-    border: 2px solid red;
-    width: 500px;
-    height: 500px;
+    font-size: 40px;
+    text-align: center;
+    font-style: italic;
 }
 
 .cat-container img {
-    width: 500px;
-    height: 500px;
+    width: 600px;
+    height: 600px;
+}
+
+.cat-button {
+    padding-top: 50px;
 }
 
 /*Styling for Jokes Page*/
@@ -164,6 +177,7 @@ main {
     width: 100%;
     height: 400px;
     background: linear-gradient(#5fd6eb, rgb(10, 45, 117));
+    border: 2px solid rgb(10, 45, 117);
     color: white;
     text-align: center;
     margin: 10px;
