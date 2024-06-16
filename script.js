@@ -17,7 +17,7 @@ const createJokeData = (response) => {
 
     return (`
     <div class="joke-container">
-        <p>${joke}</p>
+        ${joke}
     </div>
     `)
 }
@@ -77,14 +77,14 @@ const aboutPage = (`
 
 const catsPage = (`
 <div class="cats-page">
-    <p>CATS PAGE</p>
+    <div class="cat-title"><p>PURRR-FECT PICTURES</p></div>
     <div class="cat-result">
         <img src="sleeping-cat.png">
         <p>This kitty is sleeping. Click the button below for more cats!</p>
     </div>
     <form class="cat-form">
         <div class="cat-button">
-            <button type="submit" id="catButton">Click for Cat!</button>
+            <button class="button" type="submit" id="catButton">Click for Cat!</button>
         </div>
     </form>
 </div>
@@ -92,11 +92,11 @@ const catsPage = (`
 
 const jokesPage = (`
 <div class="jokes-page">
-    <div class="jokes-title"><p>JOKES PAGE</p></div>
+    <div class="jokes-title"><p>Welcome, let's have a laugh together!</p></div>
     <div class="joke-result"></div>
     <form class="joke-form">
         <div class="joke-button">
-            <button type="submit" id="jokeButton">Press for Joke!</button>
+            <button class="button" type="submit" id="jokeButton">Press for Joke!</button>
         <div>
     </form>
 </div>
@@ -104,11 +104,10 @@ const jokesPage = (`
 
 const weatherPage = (`
 <div class="weather-page">
-    <p>6 Day Weather Forecast</p>
+    <div class="weather-title">6 DAY WEATHER FORECAST</div>
     <form class="weather-form">
-        <label for="inputCity">City:</label>
         <input class="city" id="cityText" type="text" placeholder="enter city" required>
-        <button type="submit" id="weatherButton">Search Weather</button>
+        <button class="weather-button" type="submit" id="weatherButton">Search Weather</button>     
     </form>
     <div class="weather-result"></div>
 </div>
