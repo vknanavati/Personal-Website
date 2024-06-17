@@ -64,14 +64,42 @@ const createWeatherData = (response) => {
 /* ---------- TEMPLATES ---------- */
 
 const landingPage = (`
-<div class="home-construction">
-    <img src="construction.png" alt="blue square with sign" id="construction-png">
+<div class="home-page">
+    <div class="welcome-title">
+        <p>Welcome to my page!</p>
+    </div>
+    <div class="images">
+        <div class="cat-image">
+            <a href="#" id="cat-link"><img src="cat-sample.png"></a>
+        </div>
+        <div class="joke-image">
+            <a href="#" id="joke-link"><img src="joke-sample.png"></a>
+        </div>
+        <div class="weather-image">
+            <a href="#" id="weather-link"><img src="weather-sample.png"></a>
+        </div>
+    </div>
+   
 </div>
 `)
 
 const aboutPage = (`
 <div class="about-page">
-    <p>ABOUT PAGE</p>
+    <div class="about-title">
+        <p>ABOUT ME</p>
+    </div>
+    <div class="about-box">
+        <p>Welcome! My name is Vimin and I am an aspiring computer programmer.</p>
+
+        <p>I started my programming journey by teaching myself Python. As I grew more confident in my abilities, I expanded my knowledge to web develpment. 
+        I dove into HTML, CSS, and JavaScript allowing me to build dynamic and interactive websites.</p>
+
+        <p>My self-taught journey has been challenging but incredibly rewarding.
+        It has equipped me with a solid foundation in both backend and frontend development, and I am always eager to learn more and take on new challenges.</p>
+
+        <p>Thank you for visiting my website. I look forward to sharing my projects and progress with you as I continue to grow as a programmer.</p>
+
+    </div>
 </div>
 `)
 
@@ -115,7 +143,16 @@ const weatherPage = (`
 
 const contactPage = (`
 <div class="contact-page">
-    <p>CONTACT PAGE</p>
+    <div class="contact-title">
+        <p>SAY HELLO!</p>
+    </div>
+    <div class="contact-message">
+        <p>Feel free to connect with me if you have any questions, suggestions, or opportunities for collaboration.</p>
+    </div>
+    <div class="contact-email">
+        <img src="email-logo.png">
+        <p>vimin.nanavati@gmail.com</p>
+    </div>
 </div>
 `)
 
@@ -300,6 +337,10 @@ $('.nav-bar').on('click', '#nav-cats', () => catsHandler());
 $('.nav-bar').on('click', '#nav-jokes', () => jokesHandler());
 $('.nav-bar').on('click', '#nav-weather', () => weatherHandler());
 $('.nav-bar').on('click', '#nav-contact', () => contactHandler());
+
+$(document).on('click', '#cat-link', () => catsHandler());
+$(document).on('click', '#joke-link', () => jokesHandler());
+$(document).on('click', '#weather-link', () => weatherHandler());
 
 $('main').on('submit', '.joke-form', event => jokeSubmitHandler(event));
 $('main').on('submit', '.cat-form', event => catSubmitHandler(event));
