@@ -2,8 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Barlow", sans-serif;
-
+    font-family: 'Italiana'
 }
 
 body {
@@ -37,6 +36,16 @@ ul li a {
     padding: 0 10px;
     /*allows for horizontal/vertical paddings*/
     display: inline-block;
+    color: #103967;
+    font-weight: 600;
+}
+
+a:hover {
+    color: hsl(237, 92%, 51%);
+}
+
+a:active {
+    color: #cb64f7;
 }
 
 main {
@@ -45,23 +54,73 @@ main {
     justify-content: center;
 }
 
-
 .button {
     font-size: 30px;
     padding: 10px;
-    border-radius: 10px;
+    border-radius: 20px;
     font-weight: 600;
     text-align: center;
-    /* border: none; */
+    background: #103967;
+    color: white;
 }
 
-/*styling for Cats page*/
+.welcome-title p {
+    font-size: 200px;
+    padding-top: 300px;
+    padding-left: 100px;
+}
 
+.images {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.images img {
+    width: 90%;
+    transition: transform .2s;
+}
+
+.cat-image:hover,
+.joke-image:hover,
+.weather-image:hover {
+    -webkit-transform: scale(1.1);
+
+    transform: scale(1.1);
+}
+
+/*About Page*/
+.about-title {
+    padding-top: 60px;
+    font-size: 80px;
+    text-align: center;
+    padding-bottom: 70px;
+    color: #103967;
+}
+
+.about-box {
+    margin: auto;
+    border: 7px solid #ACE6E0;
+    border-radius: 20px;
+    width: 80%;
+    font-size: 40px;
+    line-height: 70px;
+    padding: 30px;
+    background-color: #ACE6E0;
+}
+
+.about-box p {
+    margin-bottom: 20px;
+
+}
+
+/*Cats Page*/
 .cat-title p {
     text-align: center;
     padding-top: 60px;
     padding-bottom: 50px;
     font-size: 60px;
+    color: #103967;
 }
 
 .cat-button {
@@ -87,6 +146,7 @@ main {
     font-size: 40px;
     text-align: center;
     font-style: italic;
+    color: #103967;
 }
 
 .cat-container img {
@@ -98,7 +158,7 @@ main {
     padding-top: 50px;
 }
 
-/*Styling for Jokes Page*/
+/*Jokes Page*/
 .jokes-page {
     padding-top: 200px;
 }
@@ -108,7 +168,8 @@ main {
     /* margin: 50px; */
     font-weight: 700;
     font-style: italic;
-    font-size: 60px;
+    font-size: 70px;
+    color: #103967;
 }
 
 .joke-result {
@@ -121,14 +182,14 @@ main {
     box-shadow: 30px 30px 40px 5px;
     background-color: #ACE6E0;
     color: #112A46;
-
 }
 
 .joke-container {
     text-align: center;
-    font-size: 30px;
+    font-size: 40px;
+    font-weight: 700;
     word-wrap: break-word;
-    padding-top: 20px;
+    padding-top: 40px;
     padding-left: 5px;
     padding-right: 5px;
 }
@@ -138,19 +199,19 @@ main {
     padding-top: 30px;
 }
 
-/*Styling for Weather Page*/
+/*Weather Page*/
 .weather-title {
-    text-align: center;
-    padding-top: 10px;
+    /* text-align: center; */
     padding-bottom: 30px;
     font-size: 100px;
     padding-top: 100px;
+    color: #103967;
 }
 
 .city {
     width: 400px;
     font-size: 30px;
-    padding-right: 20px;
+    padding: 3px 20px 4px 5px;
 }
 
 .weather-button {
@@ -158,7 +219,14 @@ main {
     width: 250px;
     font-size: 30px;
     border-radius: 5px;
+    font-size: 30px;
+    padding: 10px;
+    border-radius: 20px;
+    font-weight: 600;
+    background: #103967;
+    color: white;
 }
+
 
 .weather-form {
     text-align: center;
@@ -167,7 +235,7 @@ main {
 .weather-result {
     width: 100%;
     display: flex;
-    flex-direction: row;
+    /* flex-direction: row; */
     justify-content: center;
     align-items: center;
     padding-top: 50px;
@@ -186,3 +254,49 @@ main {
     font-size: 30px;
 
 }
+
+/*contact page*/
+.contact-title p {
+    padding-top: 60px;
+    font-size: 80px;
+    text-align: center;
+    padding-bottom: 70px;
+    color: #103967;
+}
+
+.contact-message p {
+    font-size: 35px;
+    text-align: center;
+    color: #103967;
+    padding-bottom: 70px;
+}
+
+.contact-email {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #A5E9E2;
+    width: 40%;
+    margin: auto;
+    padding: 20px;
+    border-radius: 20px;
+}
+
+.contact-email img {
+    max-width: 80px;
+}
+
+.contact-email p {
+    font-size: 35px;
+    color: #103967;
+    margin-left: 20px;
+}
+
+/* margin: auto;
+border: 7px solid #ACE6E0;
+border-radius: 20px;
+width: 80%;
+font-size: 40px;
+line-height: 70px;
+padding: 30px;
+background-color: #ACE6E0; */
