@@ -7,6 +7,8 @@
 
 body {
     background-color: #5fd6eb;
+    padding-bottom: 500px;
+    min-width: 200px;
 }
 
 header {
@@ -65,7 +67,7 @@ main {
 }
 
 .welcome-title p {
-    font-size: 200px;
+    font-size: 100px;
     padding-top: 300px;
     padding-left: 100px;
 }
@@ -271,32 +273,35 @@ main {
     padding-bottom: 70px;
 }
 
-.contact-email {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.contact-info {
     background-color: #A5E9E2;
-    width: 40%;
+    /* width: 40%; */
     margin: auto;
     padding: 20px;
     border-radius: 20px;
+    width: 600px;
 }
 
-.contact-email img {
-    max-width: 80px;
+.contact-data {
+    display: flex;
+    padding-bottom: 20px;
 }
 
-.contact-email p {
+.contact-data a {
     font-size: 35px;
     color: #103967;
     margin-left: 20px;
+    padding-top: 20px;
 }
 
-/* margin: auto;
-border: 7px solid #ACE6E0;
-border-radius: 20px;
-width: 80%;
-font-size: 40px;
-line-height: 70px;
-padding: 30px;
-background-color: #ACE6E0; */
+.contact-data img {
+    max-width: 80px;
+}
+
+a:hover {
+    color: hsl(237, 92%, 51%);
+}
+
+a:active {
+    color: #cb64f7;
+}
