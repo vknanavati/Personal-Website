@@ -149,9 +149,19 @@ const contactPage = (`
     <div class="contact-message">
         <p>Feel free to connect with me if you have any questions, suggestions, or opportunities for collaboration.</p>
     </div>
-    <div class="contact-email">
-        <img src="email-logo.png">
-        <p>vimin.nanavati@gmail.com</p>
+    <div class = "contact-info">
+        <div class="contact-data">
+            <img src="email-logo.png">
+            <a href="mailto:vimin.nanavati@gmail.com">vimin.nanavati@gmail.com</a>
+        </div>
+        <div class="contact-data">
+            <img src="github-logo.png">
+            <a href="https://github.com/vknanavati" target="_blank" rel="noopener noreferrer">Github</a>
+        </div>
+        <div class="contact-data">
+            <img src="linkedin-logo.png">
+            <a href="https://www.linkedin.com/in/vimin-nanavati-3510555b/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        </div>
     </div>
 </div>
 `)
